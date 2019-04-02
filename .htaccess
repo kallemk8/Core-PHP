@@ -1,0 +1,22 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteCond %{HTTP_HOST} ^audio.livevideoshub.com [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ http://www.audio.livevideoshub.com/$1 [L,R=301,NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule    ^Janatha-Garage-Teaser-NTR-Janatha-Garage-Teaser-2016-Samantha?$    single.php    [NC,L]    # Handle requests for "pet-care"
+   
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule    ^([0-9a-zA-Z_-]+)/([0-9]+)    single.php?title=$1&postid=$2 
+
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule    ^category/([0-9a-zA-Z_-]+)/([0-9]+)    category.php?catname=$1&postid=$2  
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule    ^gallerys    gallerypage.php
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule    ^gallery/([0-9a-zA-Z_-]+)    gallery-single.php?gallery=$1

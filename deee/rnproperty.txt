@@ -1,0 +1,6 @@
+DB : rnproperty
+user: rnpropertyuser
+password: Rn@property123
+
+
+
